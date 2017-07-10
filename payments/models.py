@@ -14,6 +14,10 @@ class Child(models.Model):
     def __str__(self):
         return str(self.name)
 
+    class Meta:
+        verbose_name = u"Ребенок"
+        verbose_name_plural = u"Дети"
+
 
 
 # Payment model
@@ -24,6 +28,9 @@ class Payment_made(models.Model):
 
     def __str__(self):
         return str(self.name)
+    class Meta:
+        verbose_name = u"Выполненный платеж"
+        verbose_name_plural = u"Выполненные платежи"
 
 class Payment_needed(models.Model):
     ADDRESS = (
@@ -38,3 +45,7 @@ class Payment_needed(models.Model):
 
     def __str__(self):
         return str(self.category)
+
+    class Meta:
+        verbose_name = u"Необходимый платеж"
+        verbose_name_plural = u"Необходимые платежи"
