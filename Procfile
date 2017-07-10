@@ -1,0 +1,1 @@
+web: gunicorn chg50.wsgi
