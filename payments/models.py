@@ -24,7 +24,9 @@ class Child(models.Model):
 class Payment_made(models.Model):
     name = models.ForeignKey('Child', db_index=True, null = True, verbose_name = 'ФИО ребенка')
     contribution = models.DecimalField(max_digits=10, decimal_places=2, verbose_name="Сумма")
-    payment_date = models.DateField(auto_now=True)
+    payment_date = models.DateField()
+
+
 
     def __str__(self):
         return str(self.name)
